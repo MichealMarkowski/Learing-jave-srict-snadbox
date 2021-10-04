@@ -3,30 +3,23 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Learning HTML</title>
+    <title>Something For Someone</title>
     <meta name="author" content="Mark Mercer">
-    <meta name="description" content="Learning HTML"> <!--Webpage Description -->
+    <meta name="description" content="Something For Someone"> <!--Webpage Description -->
     <meta name="keywords" content="Learning, Tag, HTML, Layout">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style> div {border: thin dotted red;} </style>
-
-  </head>
-
-  <body>
-
-    <div><header><h1 style="font-size:5.5vw;">Learning HTML (Splash Page)</h1></header></div>
-
-    <div><h3><nav>Navigation with no viewport in h3</nav></h3></div>
-
-    <div>
-      <aside>
+     <style> div {//border;} </style>
+      </head>
+        <body>
+          <div><header><h1 style="font-size:5.6vw;">Learning HTML (Splash Page)</h1></header></div>
+            <div><h3><nav>Navigation with no viewport in h3</nav></h3></div>
+              <div>
+                <aside>
         <p>This is the aside space with no viewport in a p-tag.</p>
       </aside>
     </div>
-
-    <div>
-      <section>
+      <div>
+       <section>
         <h3 style="font-size:2.5vw;">Making Comparisons of Tags</h3>
         <article>
           <p>Here are the hyperlinks to the mandatory Experiment Pages: </p>
@@ -53,21 +46,36 @@
         </article>
       </section>
     </div>
-
   </body>
-
-  <footer>
+<footer>
     <!-- Date Accessed: 20210916-->
     <blockquote cite="https://www.brainyquote.com/quotes/mitchell_kapor_163583">
       <p><em>Getting information off the Internet is like taking a drink from a firehose.</em></p>
-      <p>
-        <strong>
-          <a href="https://www.brainyquote.com/quotes/mitchell_kapor_163583" target="_blank">
+        <p>
+         <strong>
+           <a href="https://www.brainyquote.com/quotes/mitchell_kapor_163583" target="_blank">
             Mitch Kapor
           </a>
         </strong>
       </p>
     <p>&copy Mark Mercer, powered by MercersKitchen in GitHub</p>
   </footer>
-
 </html>
+ <h2>JavaScript Validation</h2>
+   <p>Please input a number between 1 and 10:</p>
+     <input id="numb">
+      <button type="button" onclick="myFunction()">Submit</button>
+       <p id="demo"></p>
+         <script>
+    function myFunction() {
+  // Get the value of the input field with id="numb"
+  let x = document.getElementById("numb").value;
+  // If x is Not a Number or less than one or greater than 100
+  let text;
+  if (isNaN(x) || x < 1 || x > 100) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
